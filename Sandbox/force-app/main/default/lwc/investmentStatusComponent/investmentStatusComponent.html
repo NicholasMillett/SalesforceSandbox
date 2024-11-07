@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Investment Status">
+        <div class="slds-p-around_medium">
+            <!-- Name Field -->
+            <lightning-input label="Name" placeholder="Enter Name" value={name} onchange={handleInputChange}></lightning-input>
+
+            <!-- Status Field (Dropdown) -->
+            <lightning-combobox
+                label="Status"
+                placeholder="Select Status"
+                value={status}
+                options={statusOptions}
+                onchange={handleStatusChange}>
+            </lightning-combobox>
+
+            <!-- Description Field -->
+            <lightning-textarea label="Description" placeholder="Enter Description" value={description} onchange={handleInputChange}></lightning-textarea>
+
+            <!-- Number of Investment Accounts Field -->
+            <lightning-input type="number" label="Number of Investment Accounts" placeholder="Enter Number" value={numOfAccounts} onchange={handleInputChange}></lightning-input>
+        </div>
+    </lightning-card>
+</template>
